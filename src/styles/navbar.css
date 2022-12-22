@@ -1,0 +1,22 @@
+.navbar{z-index: 999 !important;}
+.navbar-brand{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+}
+.nav{
+    position: absolute;
+    right: 10px;
+    margin-right: 2rem;
+}
+.nav a{
+    color: #4a148c;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-right: .5rem;
+}
+.nav a:hover{
+    color: #4a148c!important;
+    text-decoration: none!important;
+    transition: all;
+}

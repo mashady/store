@@ -1,0 +1,31 @@
+.row{
+    --bs-gutter-x: 0!important;
+}
+.price{
+    display: inline;
+    margin-left: 1rem;
+}
+.price .last-price{
+    margin-right: 1rem;
+        color: #6c757d !important;
+        
+        font-weight: 500;
+        font-size: 1.1rem;
+}
+.price .last-price span{
+    text-decoration: line-through;
+}
+.price .price-now{
+    font-size: 2rem;
+        font-weight: bold;
+        color: #4a148c;
+    }
+.product-delivery{
+    padding:0.5rem 1rem !important;
+}   
+.delivery-date-between span{
+   font-weight: 600;
+}
+.product-drscribtion{
+    
+}

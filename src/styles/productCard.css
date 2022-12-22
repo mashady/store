@@ -1,0 +1,14 @@
+.product-bg{
+    height: 60%;
+
+}
+.card-body{
+    position: relative
+}
+.card-body .card-options{
+        position: absolute;
+            top: 6px;
+            right: 0px;
+            font-size: 1.2rem;
+            cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.side-genre-nav{
+    height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+}
+.side-genre-nav div{
+    margin-top: 5rem;
+    padding: 0 2rem;
+}
+.side-genre-nav div a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000e6;
+    display: block;
+}
+.side-genre-nav div a.active{
+    background-color: #4a148c;
+    color: #FFF;
+        border-radius: 0.5rem;
+}
