@@ -5,6 +5,7 @@ import { getGenres } from "../services/fakeGenreService";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 import Swiper from "./common/swiper";
 
@@ -149,6 +150,30 @@ export default class product extends Component {
                 heading to explain the heading. We'll add onto it with another
                 sentence and probably just keep going until we run out of words.
               </p>
+            </div>
+            <h2 className="mb-4">Product Details</h2>
+            <div className="product-details-list">
+              <ul className="list-group">
+                <li className="list-group-item">
+                  <span>Publisher : </span>
+                  <span>
+                    Duke University Press Books; Illustrated edition (September
+                    17, 2008)
+                  </span>
+                </li>
+                <li className="list-group-item">
+                  <span>Language : </span>
+                  <span>English</span>
+                </li>
+                <li className="list-group-item">
+                  <span>item weight : </span>
+                  <span>15.2 ounces</span>
+                </li>
+                <li className="list-group-item">
+                  <span>Dimensions : </span>
+                  <span>6.13 x 0.81 x 9 inches</span>
+                </li>
+              </ul>
             </div>
           </main>
         </div>

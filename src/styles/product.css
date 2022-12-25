@@ -29,3 +29,10 @@
 .product-drscribtion{
     
 }
+.product-details-list .list-group-item{
+border: none;
+}
+.product-details-list .list-group-item span:first-child{
+    font-weight: bold;
+    margin-right: 0.5rem;
+}

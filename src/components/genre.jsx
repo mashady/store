@@ -2,29 +2,31 @@ import React, { Component } from "react";
 import ProductCard from "./common/productCard";
 import { getMovies, deleteMovie } from "../services/fakeMovieService";
 import { getGenres } from "../services/fakeGenreService";
+import Pagination from "./common/pagination";
+
 import { paginate } from "../utils/paginate";
 import ListGroup from "./common/listGroup";
 
 import "../styles/genre.css";
-import _ from "lodash";
+import _, { filter } from "lodash";
 
 export default class genre extends Component {
   state = {
     movies: [],
     genres: [],
     currentPage: 1,
-    pageSize: 4,
+    pageSize: 3,
     searchQuery: "",
-    selectedGenre: null,
+    //selectedGenre: null,
     sortColumn: { path: "title", order: "asc" },
   };
 
   async componentDidMount() {
     const theAllGenres = await getGenres();
-    //const genres = [{ _id: "", name: "All Genres" }, ...data];
+    const genres = [{ _id: "", name: "All" }, ...theAllGenres];
 
     const theAllMovies = await getMovies();
-    this.setState({ movies: theAllMovies, genres: theAllGenres });
+    this.setState({ movies: theAllMovies, genres: genres });
   }
 
   handleDelete = async (movie) => {
@@ -48,6 +50,7 @@ export default class genre extends Component {
 
   handleGenreSelect = (genre) => {
     this.setState({ selectedGenre: genre, searchQuery: "", currentPage: 1 });
+    console.log(genre);
   };
 
   handleSearch = (query) => {
@@ -78,7 +81,7 @@ export default class genre extends Component {
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
 
-    const movies = paginate(sorted, currentPage, pageSize);
+    const movies = paginate(filtered, currentPage, pageSize);
 
     return { totalCount: filtered.length, data: movies };
   };
@@ -87,16 +90,18 @@ export default class genre extends Component {
     //const { user } = this.props;
 
     const { totalCount, data: movies } = this.getPagedData();
+    console.log(movies);
     // Just For Test !!
     let theMoviesData = this.state.movies;
     let theGenresData = this.state.genres;
-    console.log(theMoviesData);
-    console.log(theGenresData);
+    //console.log(theMoviesData);
+    //console.log(theGenresData);
+    //console.log(this.state.selectedGenre);
     return (
       <div>
         <div className="side-genre-nav bg-light">
           <div>
-            <h3 className="mb-3">genres</h3>
+            <h3 className="mb-3">categories</h3>
             <ListGroup
               items={this.state.genres}
               selectedItem={this.state.selectedItem}
@@ -104,13 +109,11 @@ export default class genre extends Component {
             />
           </div>
         </div>
-        <p style={{ marginLeft: "20rem" }}>
-          Showing {totalCount} movies in the database
-        </p>
         <main style={{ marginLeft: "200px" }}>
-          <div className="row">
-            <ProductCard />
+          <div className="container">
+            <ProductCard prdouct={movies} />
           </div>
+          <Pagination />
         </main>
       </div>
     );
