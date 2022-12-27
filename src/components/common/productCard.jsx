@@ -10,37 +10,30 @@ import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 export default class productCard extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-lg-3 col-md-6 col-sm-6">
-          <div
-            className="product-card"
-            style={{
-              width: "",
-              cursor: "pointer",
-              margin: "1rem",
-            }}
-          >
-            <div
-              className="product-bg rounded mb-2"
-              style={{
-                backgroundImage: `url(${coverUrl})`,
-                backgroundRepat: "no-repeat",
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-                height: "300px",
-              }}
-            ></div>
-            <div className="card-body">
-              <h6 className="card-title">
-                Much longer title that wraps to multiple lines
-              </h6>
-              <span>33$</span>
-              <FontAwesomeIcon
-                className="card-options"
-                icon={faEllipsisVertical}
-              />
-            </div>
-          </div>
+      <div
+        className="product-card"
+        style={{
+          width: "",
+          cursor: "pointer",
+          margin: "1rem",
+        }}
+      >
+        <div
+          className="product-bg rounded mb-2"
+          style={{
+            backgroundImage: `url(${coverUrl})`,
+            backgroundRepat: "no-repeat",
+            backgroundPosition: "center center",
+            backgroundSize: "cover",
+            height: "300px",
+          }}
+        ></div>
+        <div className="card-body">
+          <h6 className="card-title">
+            Much longer title that wraps to multiple lines
+          </h6>
+          <span>33$</span>
+          <FontAwesomeIcon className="card-options" icon={faEllipsisVertical} />
         </div>
       </div>
     );

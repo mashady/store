@@ -8,6 +8,7 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 import Swiper from "./common/swiper";
+import SwiperTwo from "./common/swiper/relatedSwiper";
 
 import "../styles/product.css";
 
@@ -176,6 +177,10 @@ export default class product extends Component {
               </ul>
             </div>
           </main>
+        </div>
+        <div className="swiper-con" style={{ padding: "1rem" }}>
+          <h3 style={{ marginLeft: "1rem" }}>Related Products</h3>
+          <SwiperTwo />
         </div>
       </div>
     );

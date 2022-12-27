@@ -26,9 +26,6 @@ export default function App() {
     <>
       <Swiper
         direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
         autoplay={{
           delay: 4000,
         }}
@@ -43,7 +40,9 @@ export default function App() {
             backgroundSize: "cover",
             backgroundImage: `url(${coverUrl})`,
           }}
-        ></SwiperSlide>
+        >
+          a
+        </SwiperSlide>
         <SwiperSlide
           style={{
             height: "100%",

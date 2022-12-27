@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/listGroup.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const ListGroup = ({
   items,
   textProperty,
@@ -12,12 +14,14 @@ const ListGroup = ({
       {items.map((item) => (
         <li
           style={{
-            fontSize: "1.1rem",
+            fontSize: "1rem",
+            fontWeight: "500",
             marginBottom: "0.5rem",
             marginLeft: "0.2rem",
             cursor: "pointer",
-            padding: "0.2rem",
+            padding: "0.6rem",
             borderRadius: "0.3rem",
+            color: "#9e9ea7",
           }}
           onClick={() => onItemSelect(item)}
           key={item[valueProperty]}
@@ -28,7 +32,9 @@ const ListGroup = ({
           }
         >
           {item[textProperty]}
-          <span class="badge bg-primary rounded-pill">{items.length - 1}</span>
+          <span class="" style={{ color: "#9e9ea7" }}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </span>
         </li>
       ))}
     </ul>

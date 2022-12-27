@@ -109,9 +109,13 @@ export default class genre extends Component {
             />
           </div>
         </div>
-        <main style={{ marginLeft: "200px" }}>
+        <main style={{ marginLeft: "251px" }}>
           <div className="container">
-            <ProductCard prdouct={movies} />
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-sm-6">
+                <ProductCard prdouct={movies} />
+              </div>
+            </div>
           </div>
           <Pagination />
         </main>
